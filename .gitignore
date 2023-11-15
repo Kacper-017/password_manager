@@ -1,0 +1,39 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore environment variables file
+.venv
+.env
+# Ignore compiled binary files
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Ignore package-lock.json file
+package-lock.json
+
+# Ignore .DS_Store files on macOS
+.DS_Store
+# Ignore Python virtual environment
+venv/
+
+# Ignore compiled Python files
+*.pyc
+
+# Ignore pipenv files
+Pipfile.lock
+Pipfile
+
+# Ignore any local build artifacts
+build/
+dist/
+*.egg-info/
+
+# Ignore any local test artifacts
+.coverage
+.tox/
+nosetests.xml
