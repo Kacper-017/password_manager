@@ -1,0 +1,61 @@
+WindowManager:
+    LogInWindow:
+    RegisterWindow:
+    CameraWindow:
+    PasswordListWindow:
+    PasswordEntryWindow:
+
+<LogInWindow>:
+    name: 'login'
+
+<RegisterWindow>:
+    name: 'register'
+    BoxLayout:
+        Button:
+            text: 'Goto settings'
+            on_press: root.manager.current = 'settings'
+        Button:
+            text: 'Quit'
+
+<<CameraWindow>:
+    name: 'camerawindow'
+    orientation: 'vertical'
+    BoxLayout:
+        Camera:
+            id: camera
+            resolution: (640, 480)
+            play: False
+        ToggleButton:
+            text: 'Play'
+            on_press: camera.play = not camera.play
+            size_hint_y: None
+            height: '48dp'
+        Button:
+            text: 'Capture'
+            size_hint_y: None
+            height: '48dp'
+            on_press: root.capture()
+        Button:
+            text: 'Back'
+            size_hint_y: None
+            height: '48dp'
+            on_press: root.manager.current = 'login'
+
+<PasswordListWindow>:
+    name: 'list'
+    BoxLayout:
+        Button:
+            text: 'Goto settings'
+            on_press: root.manager.current = 'login'
+        Button:
+            text: 'Quit'
+
+<PasswordEntryWindow>:
+    name: 'entry'
+    BoxLayout:
+        Button:
+            text: 'Goto settings'
+            on_press: root.manager.current = 'list'
+        Button:
+            text: 'Quit'
+
