@@ -38,5 +38,16 @@ dist/
 .tox/
 nosetests.xml
 
+# Ignore dataset
+*.tgz
+
 # Ignore images
 *.jpg
+*.png
+
+# Ignore alts
+password_manager/alt/
+
+# Ignore the copy 
+password_manager (copy)/
+

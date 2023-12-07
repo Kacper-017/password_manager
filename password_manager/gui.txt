@@ -60,8 +60,9 @@ GridLayout:
             on_press: app.stop()
 
 <RegisterScreen>:
-    orientation: 'vertical'
+    orientation: 'horizontal'
     BoxLayout:
+    orientation: 'vertical'
         TextInput:
             id: username
             text: "Username"
